@@ -11,14 +11,20 @@
  元素（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素。<br>
  ### 2.分析 HTML 文档
  对于我们创建的 HTML 文档，前面生成的框架进行如下分析：
-<br>
-`<!DOCTYPE html>`: 声明文档类型。<br>
-`<html></html>`: 这个元素包裹了整个完整的页面，是一个**根元素**，其它元素都嵌套到其中。<br>
-`<head></head>`: 这个元素是一个容器，它包含了所有你想包含在HTML页面中但不想在HTML页面中显示的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述，CSS样式，字符集声明等等。<br>
-`<meta charset="utf-8">`: 这个元素设置文档使用utf-8字符集编码.<br>
-`<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`: 指定页面的图标，出现在浏览器标签上。<br>
-`<title></title>`: 设置页面标题，出现在浏览器标签上.<br>
-`<body></body>`: 包含你能在页面看到的所有内容，包括文本，图片，音频，游戏等等。<br>
+
+`<!DOCTYPE html>`: 声明文档类型。
+
+`<html></html>`: 这个元素包裹了整个完整的页面，是一个**根元素**，其它元素都嵌套到其中。
+
+`<head></head>`: 这个元素是一个容器，它包含了所有你想包含在HTML页面中但不想在HTML页面中显示的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述，CSS样式，字符集声明等等。
+
+`<meta charset="utf-8">`: 这个元素设置文档使用utf-8字符集编码.
+
+`<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`: 指定页面的图标，出现在浏览器标签上。
+
+`<title></title>`: 设置页面标题，出现在浏览器标签上.
+
+`<body></body>`: 包含你能在页面看到的所有内容，包括文本，图片，音频，游戏等等。
 ---
 ### 三.HTML元素
 #### 1.HTML标题
@@ -160,6 +166,70 @@ alt 属性用来为图像定义一串预备的可替换的文本(当图片失效
 <li>Milk</li>
 </ol>
  ````
+---
+ #### 9.HTML区块
+ 大多数 HTML 元素被定义为块级元素或内联元素。
+块级元素在浏览器显示时，通常会以新行来开始（和结束）。
+实例: `<h1>`, `<p>`, `<ul>`, `<table>`
+##### `<div>`元素
+ HTML `<div>` 元素是块级元素，它可用于组合其他 HTML 元素的容器,它属于块级元素，浏览器会在其前后显示折行。
+如果与 CSS 一同使用，<div> 元素可用于对大的内容块设置样式属性。
+`<div>` 元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。使用 `<table>` 元素进行文档布局不是表格的正确用法。`<table>` 元素的作用是显示表格化的数据。
+ 如，
+ ````
+ <!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
 
+<div id="container" style="width:500px">
+
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+
+<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+<b>菜单</b><br>
+HTML<br>
+CSS<br>
+JavaScript</div>
+
+<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+内容在这里</div>
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+版权 © runoob.com</div>
+
+</div>
  
- 
+</body>
+</html>
+ ````
+ ---
+ ##### `<span>`元素
+ HTML `<span>` 元素是内联元素，可用作文本的容器
+`<span>` 元素也没有特定的含义。
+当与 CSS 一同使用时，`<span>` 元素可用于为部分文本设置样式属性。
+ 如，
+ ````
+ <!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+<p>我的母亲有 <span style="color:blue;font-weight:bold">蓝色</span> 的眼睛，我的父亲有 <span style="color:darkolivegreen;font-weight:bold">碧绿色</span> 的眼睛。</p>
+</body>
+</html>
+ ````
+ ---
+ ##### HTML分组标签
+ <table>
+  <tr><th>标签</th><th>描述</th>
+  <tr><td>&ltdiv&gt</td>  <td>定义了文档的区域，块级 (block-level)</td>
+<tr><td>&ltspan&gt</td> <td>用来组合文档中的行内元素， 内联元素(inline)</td>
+
+ ---

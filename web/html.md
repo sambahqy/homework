@@ -340,5 +340,4 @@ Username: <input type="text" name="user">
  ````
 $\color{red}{注：}$
  当提交时，表单中没有`name`属性的元素将不会提交，比如上面工作日期的选择器。有`name`属性的元素其`value`的值将提交给服务器。
----
  

@@ -1,9 +1,10 @@
 # HTML
----
 ## 一.html的定义
- &emsp; HTML是**超文本标记语言**，是一种定义内容结构的标记语言，定义了**网页的含义和结构**
+HTML是**超文本标记语言**，是一种定义内容结构的标记语言，定义了**网页的含义和结构**  
+ 
  ---
 ## 二.html文档结构分析
+
 ### 1.对一个html元素的简单剖析（以`<p></p>`为例）
  开始标签（Opening tag）：包含元素的名称，被左、右角括号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。<br>
  结束标签（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。<br>
@@ -35,8 +36,8 @@
   <h2>这是一个标题。</h2>
   <h3>这是一个标题。</h3>
   ````
-  **注**：会自动给标题换行
-  ---
+  $\color{red}{注：}$会自动给标题换行  
+  ***
   #### 2.HTML段落
   HTML可以将文档分为若干段落
   如
@@ -227,9 +228,117 @@ JavaScript</div>
  ````
  ---
  ##### HTML分组标签
- <table>
-  <tr><th>标签</th><th>描述</th>
-  <tr><td>&ltdiv&gt</td>  <td>定义了文档的区域，块级 (block-level)</td>
-<tr><td>&ltspan&gt</td> <td>用来组合文档中的行内元素， 内联元素(inline)</td>
-
+ |标签|描述|
+ |:----:|:----:| 
+ |`<div>`|定义了文档的区域，块级 (block-level)|
+ |`<span>`|用来组合文档中的行内元素， 内联元素(inline)|
  ---
+#### 10.HTML表单(`<form>`)
+ HTML 表单用于收集用户的输入信息，表示文档中的一个区域，此区域包含交互控件，将用户收集到的信息发送到 Web 服务器。
+表单是一个包含表单元素的区域，允许用户在表单中输入内容，
+ 比如：文本域（textarea）、下拉列表（select）、单选框（radio-buttons）、复选框（checkbox） 等等。
+ ##### 输入元素
+ 多数情况下被用到的表单标签是输入标签 `<input>`。
+输入类型是由 type 属性定义。
+接下来我们介绍几种常用的输入类型。
+ **文本域**
+ 文本域通过 `<input type="text">` 标签来设定，当用户要在表单中键入字母、数字等内容时，就会用到文本域。
+````
+ <form>
+First name: <input type="text" name="firstname"><br>
+Last name: <input type="text" name="lastname">
+</form>
+ ````
+ ---
+**密码字段**
+密码字段通过标签 `<input type="password"> `来定义:
+实例
+ ````
+<form>
+Password: <input type="password" name="pwd">
+</form>
+ ````
+ ---
+ **单选按钮（Radio Buttons）**
+`<input type="radio">` 标签定义了表单的单选框选项:
+实例
+ ````
+<form action="">
+<input type="radio" name="sex" value="male">男<br>
+<input type="radio" name="sex" value="female">女
+</form>
+ ````
+ ---
+ **复选框（Checkboxes）**
+`<input type="checkbox"> `定义了复选框。
+复选框可以选取一个或多个选项：
+实例
+ ````
+<form>
+<input type="checkbox" name="vehicle" value="Bike">我喜欢自行车<br>
+<input type="checkbox" name="vehicle" value="Car">我喜欢小汽车
+</form>
+ ````
+ ---
+ **提交按钮(Submit)**
+`<input type="submit">` 定义了提交按钮。
+当用户单击确认按钮时，表单的内容会被传送到服务器。表单的动作属性 action 定义了服务端的文件名。
+action 属性会对接收到的用户输入数据进行相关的处理:
+实例
+ ````
+<form name="input" action="html_form_action.php" method="get">
+Username: <input type="text" name="user">
+<input type="submit" value="Submit">
+</form>
+ ````
+ ---
+ 综合上述元素，例子如下
+ ````
+ <form>
+  <!-- 文本框，注意有 placeholder 提示符 -->
+  用户名：<br>
+  <input type="text" name="name" placeholder="请输入用户名"><br>
+  <!-- 密码框 -->
+  密码：<br>
+  <input type="password" name="ps" placeholder="请输入密码"><br>
+  年龄：<br>
+  <!-- 数字输入框，注意 min 和 value 属性-->
+  <input type="number" name="age" min="18" value="18"><br>
+  <!-- 单选按钮, 注意 checked 属性 -->
+  性别：<br>
+  <input type="radio" name="gender" value="male" checked> 男<br>
+  <input type="radio" name="gender" value="female"> 女<br>
+  <input type="radio" name="gender" value="other"> 其它<br>
+  <!-- 下拉列表，注意 selected 属性 -->
+  党派：<br>
+  <select name="party">
+    <option value="D">民主党</option>
+    <option value="R" selected>共和党</option>
+    <option value="N">无党派</option>
+  </select><br>
+  <!-- 多选框 -->
+  您有哪些交通工具：<br>
+  <input type="checkbox" name="vehicle1" value="Bike"> 自行车<br>
+  <input type="checkbox" name="vehicle2" value="Motocycle" checked> 摩托车<br>
+  <input type="checkbox" name="vehicle3" value="Car"> 轿车<br>
+  <input type="checkbox" name="vehicle4" value="Jet"> 飞机<br>
+  <!-- 日期选择器 -->
+  您的工作日期：<br>
+  <input type="date"><br>
+  <!-- 文件选择器 -->
+  上传您的照片:<br>
+  <input type="file" name="photo"><br>
+  <!-- 文本输入区域，注意 rows 和 cols 属性 -->
+  您的建议：<br>
+  <textarea name="message" rows="5" cols="30">
+    The cat was playing in the garden.
+  </textarea><br><hr>
+  <!-- 表单提交/重置按钮，将表单中的数据取消或传输给服务器端进行处理 -->
+  <input type="submit" value="提 交">
+  <input type="reset" value="重 置">
+</form>
+ ````
+$\color{red}{注：}$
+ 当提交时，表单中没有`name`属性的元素将不会提交，比如上面工作日期的选择器。有`name`属性的元素其`value`的值将提交给服务器。
+---
+ 

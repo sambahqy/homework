@@ -1,41 +1,15 @@
 # HTML
 ## 一.html的定义
 HTML是**超文本标记语言**，是一种定义内容结构的标记语言，定义了**网页的含义和结构**  
- 
- ---
-## 二.html文档结构分析
-
-### 1.对一个html元素的简单剖析（以`<p></p>`为例）
- 开始标签（Opening tag）：包含元素的名称，被左、右角括号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。<br>
- 结束标签（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。<br>
- 内容（Content）：元素的内容，本例中就是所输入的文本本身。<br>
- 元素（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素。<br>
- ### 2.分析 HTML 文档
- 对于我们创建的 HTML 文档，前面生成的框架进行如下分析：
-
-`<!DOCTYPE html>`: 声明文档类型。
-
-`<html></html>`: 这个元素包裹了整个完整的页面，是一个**根元素**，其它元素都嵌套到其中。
-
-`<head></head>`: 这个元素是一个容器，它包含了所有你想包含在HTML页面中但不想在HTML页面中显示的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述，CSS样式，字符集声明等等。
-
-`<meta charset="utf-8">`: 这个元素设置文档使用utf-8字符集编码.
-
-`<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`: 指定页面的图标，出现在浏览器标签上。
-
-`<title></title>`: 设置页面标题，出现在浏览器标签上.
-
-`<body></body>`: 包含你能在页面看到的所有内容，包括文本，图片，音频，游戏等等。
-
----
+ -- 
 ### 三.HTML元素
 #### 1.HTML标题
 标题是通过`<h1>`-`<h6>`标签定义的
 如
   ````
-  <h1>这是一个标题。</h1>
-  <h2>这是一个标题。</h2>
-  <h3>这是一个标题。</h3>
+  <h1>标题1</h1>
+  <h2>标题2</h2>
+  <h3>标题3</h3>
   ````
   $\color{red}{注：}$会自动给标题换行  
   ***
@@ -43,15 +17,15 @@ HTML是**超文本标记语言**，是一种定义内容结构的标记语言，
   HTML可以将文档分为若干段落
   如
   ````
-<p> 是一个段落 </p>
-<p>这是另一个段落</p>
+<p> 段落 </p>
+<p> 段落 </p>
   ````
   ---
 #### 3.HTML折行
 在一个段落内进行换行，使用`<br>`
 如：
 ````
-<p>这个<br>段落<br>演示了分行的效果</p>
+<p>这个<br>分段</p>
 ````
 ---
 #### 4.文本格式化
@@ -81,7 +55,7 @@ HTML使用标签 `<a>`来设置超文本链接。
  <a href="https://www.cqjtu.edu.cn//" target="_blank" rel="noopener noreferrer">重庆交通大学</a>
  ````
  这个会新开窗口进行跳转
- ##### 锚点（页内）
+ ##### 锚点（页内 找id）
  锚点，也称为书签，用于标记页面的某个元素或位置。通过锚点，我们可以轻易的在长页面内实现跳转。
 先使用id属性生成某元素的锚点，然后再使用超链接指向该锚点即可。
 ````
@@ -132,7 +106,7 @@ alt 属性用来为图像定义一串预备的可替换的文本(当图片失效
 ````
 
 
-表格的表头使用 <th> 标签进行定义。
+表格的表头使用 `<th>` 标签进行定义。
 大多数浏览器会把表头显示为**粗体居中**的文本：
  ````
  <table border="1">
@@ -188,22 +162,16 @@ alt 属性用来为图像定义一串预备的可替换的文本(当图片失效
 </head>
 <body>
 
-<div id="container" style="width:500px">
+<div>
 
-<div id="header" style="background-color:#FFA500;">
-<h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+<div >
+<h1 >网页标题</h1></div>
 
-<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+<div >
 <b>菜单</b><br>
 HTML<br>
 CSS<br>
 JavaScript</div>
-
-<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
-内容在这里</div>
-
-<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
-版权 © runoob.com</div>
 
 </div>
  
@@ -217,16 +185,8 @@ JavaScript</div>
 当与 CSS 一同使用时，`<span>` 元素可用于为部分文本设置样式属性。
  如，
  ````
- <!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
-</head>
-<body>
-<p>我的母亲有 <span style="color:blue;font-weight:bold">蓝色</span> 的眼睛，我的父亲有 <span style="color:darkolivegreen;font-weight:bold">碧绿色</span> 的眼睛。</p>
+<p>我的母亲有 <span style="color:blue;font-weight:bold">蓝色</span> 的头发，我的父亲有 <span style="color:orange;font-weight:bold">橙色</span> 的头发</p>
 </body>
-</html>
  ````
  ---
  ##### HTML分组标签
@@ -242,6 +202,12 @@ JavaScript</div>
  ##### 输入元素
  多数情况下被用到的表单标签是输入标签 `<input>`。
 输入类型是由 type 属性定义。
+ 
+ ---
+ 
+ 
+ $\color{red}{注：}$
+ 当提交时，表单中没有`name`属性的元素将不会提交，比如上面工作日期的选择器。有`name`属性的元素其`value`的值将提交给服务器。
 接下来我们介绍几种常用的输入类型。
  **文本域**
  文本域通过 `<input type="text">` 标签来设定，当用户要在表单中键入字母、数字等内容时，就会用到文本域。
@@ -277,8 +243,8 @@ Password: <input type="password" name="pwd">
 实例
  ````
 <form>
-<input type="checkbox" name="vehicle" value="Bike">我喜欢自行车<br>
-<input type="checkbox" name="vehicle" value="Car">我喜欢小汽车
+<input type="checkbox" name="hamber" value="Bike">我喜欢汉堡<br>
+<input type="checkbox" name="hamberger" value="Car">我喜欢汉堡包
 </form>
  ````
  ---
@@ -293,53 +259,4 @@ Username: <input type="text" name="user">
 <input type="submit" value="Submit">
 </form>
  ````
- ---
- 综合上述元素，例子如下
- ````
- <form>
-  <!-- 文本框，注意有 placeholder 提示符 -->
-  用户名：<br>
-  <input type="text" name="name" placeholder="请输入用户名"><br>
-  <!-- 密码框 -->
-  密码：<br>
-  <input type="password" name="ps" placeholder="请输入密码"><br>
-  年龄：<br>
-  <!-- 数字输入框，注意 min 和 value 属性-->
-  <input type="number" name="age" min="18" value="18"><br>
-  <!-- 单选按钮, 注意 checked 属性 -->
-  性别：<br>
-  <input type="radio" name="gender" value="male" checked> 男<br>
-  <input type="radio" name="gender" value="female"> 女<br>
-  <input type="radio" name="gender" value="other"> 其它<br>
-  <!-- 下拉列表，注意 selected 属性 -->
-  党派：<br>
-  <select name="party">
-    <option value="D">民主党</option>
-    <option value="R" selected>共和党</option>
-    <option value="N">无党派</option>
-  </select><br>
-  <!-- 多选框 -->
-  您有哪些交通工具：<br>
-  <input type="checkbox" name="vehicle1" value="Bike"> 自行车<br>
-  <input type="checkbox" name="vehicle2" value="Motocycle" checked> 摩托车<br>
-  <input type="checkbox" name="vehicle3" value="Car"> 轿车<br>
-  <input type="checkbox" name="vehicle4" value="Jet"> 飞机<br>
-  <!-- 日期选择器 -->
-  您的工作日期：<br>
-  <input type="date"><br>
-  <!-- 文件选择器 -->
-  上传您的照片:<br>
-  <input type="file" name="photo"><br>
-  <!-- 文本输入区域，注意 rows 和 cols 属性 -->
-  您的建议：<br>
-  <textarea name="message" rows="5" cols="30">
-    The cat was playing in the garden.
-  </textarea><br><hr>
-  <!-- 表单提交/重置按钮，将表单中的数据取消或传输给服务器端进行处理 -->
-  <input type="submit" value="提 交">
-  <input type="reset" value="重 置">
-</form>
- ````
-$\color{red}{注：}$
- 当提交时，表单中没有`name`属性的元素将不会提交，比如上面工作日期的选择器。有`name`属性的元素其`value`的值将提交给服务器。
  

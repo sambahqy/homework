@@ -43,6 +43,7 @@ body {
 ```
 <p style="color:blue;">嘀嘀嘀</p>
 ```
+---
 # 四.CSS一些常用样式
 
 ### 1.背景
@@ -64,3 +65,41 @@ background-image:blue: url('图片位置')
 background-repeat: repeat-y
 ```
 至于里面可以填哪些，可以自行了解（no-repeat,repeat-x....）。
+
+设置位置的话用 ***background-position: ;***
+
+### 2.文本
+
+#### 文本颜色
+```
+h1 {
+      color:#blue;
+}
+```
+
+#### 文本对齐（左，右，居中,两端对齐）
+````
+text-align: right;
+````
+#### 文本修饰(多是用于删除链接的下划线的)
+````
+a {
+      text-decoration:none;
+}
+````
+
+### 3.元素内容大小(height，width)
+通过使用这两个元素来调整大小，常用单位是：px(像素),%(百分比)
+````
+div {
+  height: 100px;
+  width: 500px;
+ 
+}
+````
+---
+# 五.盒子模型
+[![RUNOOB 图标](https://www.runoob.com/images/box-model.gif)
+
+
+

@@ -99,7 +99,14 @@ div {
 ````
 ---
 # 五.盒子模型
-[![RUNOOB 图标](https://www.runoob.com/images/box-model.gif)
+[![盒子图标](https://www.runoob.com/images/box-model.gif)
 
+Margin(外边距)---与其他元素的距离
+
+Border(边框)-----边框（一般不显示）
+
+Padding(内边距)--与content之间的距离的区域
+
+Content(内容)----显示文本，图像等
 
 

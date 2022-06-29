@@ -189,11 +189,34 @@ p{
 }
 ````
 
+### 4.absolute（绝对）
+位置相对与设置了定位的父元素(**非静态(static)**)
+````
+<!-- style -->
+p{
+    position:absolute;
+    left:100px;
+    top:150px;
+    color:blue;
+}
 
+div{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
 
+<!-- style -->
+<!-- html -->
+<div>
+<p>123456789</p>
+</div>
+<!-- html -->
+````
 
-
-
+# 七.overflow(溢出)
+用于控制内容溢出元素框时候对溢出的部分进行处理。
+对应的值有：
 
 
 

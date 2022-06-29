@@ -109,4 +109,64 @@ Padding(内边距)--与content之间的距离的区域
 
 Content(内容)----显示文本，图像等
 
+例如：
 
+````
+div {
+    width: 350px;
+    border: 20px blue;
+    padding: 20px;
+    margin: 20px;
+}
+````
+---
+### 1.边框（border）
+
+#### 边框样式(border-style)
+定义边框长啥样，比如无边框，虚边框，点线边框等等，例如
+````
+div {
+      border-style: dotted;
+}
+````
+
+#### 边框颜色( border-color)
+````
+div{
+      border-style: solid;
+      border-color: blue;
+}
+````
+
+#### 边框宽度（ border-width）
+````
+div{
+      border-style: solid;
+      border-color: blue;
+       border-width： 20px;
+}
+````
+### 2.外边距(margin)
+用简写模式（上右下左，顺时针方向设置样式）为例
+````
+margin:10px 60px 80px 20px;
+````
+### 3.内边距(padding)
+内边距是内容与边界距离之间的区域，与外边距简写模式(上右下左)一样，例如：
+````
+padding:20px 40px 80px 50px;
+````
+---
+# 六.定位（position）
+定位属性指定了元素的定位类型，有五个值 ***static，relative，fixed，absolute，sticky***
+
+### 1.static(静态)
+是HTML的默认值，遵循正常的文档流对象，不会受到top,right,botom,left影响
+````
+div{
+      position:static
+      
+}
+````
+
+### 2.relative(相对)

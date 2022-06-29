@@ -158,7 +158,7 @@ padding:20px 40px 80px 50px;
 ````
 ---
 # 六.定位（position）
-定位属性指定了元素的定位类型，有五个值 ***static，relative，fixed，absolute，sticky***
+定位属性指定了元素的定位类型，有五个值 ***static，relative，fixed，absolute***
 
 ### 1.static(静态)
 是HTML的默认值，遵循正常的文档流对象，不会受到top,right,botom,left影响
@@ -170,3 +170,40 @@ div{
 ````
 
 ### 2.relative(相对)
+相对定位是相当于原本正常的位置(static)进行的
+````
+div{
+    position:relative;
+    top:-50px;
+}
+````
+
+### 3.fixed（固定）
+这个是定位是相当于浏览器窗口(视口)的，是固定位置(窗口滚动也不会移动)
+````
+p{
+    position:fixed;
+    top:30px;
+    right:10px;
+    color:blue;
+}
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

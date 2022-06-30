@@ -56,6 +56,7 @@ console.log("console!!!");
 
 ### 1.关键字
 关键字就和其他语言一样，不能被用作变量名。JS的关键字如下：
+
 abstract   else    instanceof     super       boolean  	enum    	int  	   switch
 
 break	    export  	interface 	synchronized     byte  	 extends  	let	     this
@@ -88,16 +89,21 @@ double	    in	      static       	with
 JS有很多个数据类型，这里列举几个常见的
 数字（number），字符串（String），数组（Array），对象(Object)
 ````
-var l = 10                                       //number
-var names = "hhhhh"                              // String 
-var phone = ["Saxing", "apple", "huaiwei"]       // Array  
-var dog = {yanse:"blue", daxiao:"da"}            // Object 
+var l = 10;                                       //number
+var names = "hhhhh";                              // String 
+var phone = ["Saxing", "apple", "huaiwei"];       // Array  
+var dog = {yanse:"blue", daxiao:"da"};            // Object 
 ````
 
+### 4.操作符
+|操作符| |
+|:----:|:----:| 
+ |赋值，算术和位运算符	|=  +  -  *  /	|
+ |布尔操作符|&& || ！|
+ |关系操作符| <> <=>= == === != !==|
 
-
-
-
+**注意：** 1.布尔操作符判断为假的值： false、null、undefined、''、0、NaN 
+            2.对于关系运算符的全等（===），这才是进行比较使用的
 
 
 

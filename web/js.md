@@ -73,11 +73,26 @@ delete	 implements  	return     	volatile       do	     import   	short   	while
 double	    in	      static       	with
 
 
+### 2.变量
+ var 来定义变量，不过这里注意var 定义的变量的类型随赋值的数据类型进行改变。
+ 这里就会感觉数据类型的判断有点恼火。
+ ````
+ var a=10;
+ alert(a);
+ a="1234"
+ alert(a);
+ ````
+**注意：** 这里的变量和其他语言一样，存在着局部变量，当一个函数结束完成后也会被回收掉
 
-
-
-
-
+### 3.数据类型
+JS有很多个数据类型，这里列举几个常见的
+数字（number），字符串（String），数组（Array），对象(Object)
+````
+var l = 10                                       //number
+var names = "hhhhh"                              // String 
+var phone = ["Saxing", "apple", "huaiwei"]       // Array  
+var dog = {yanse:"blue", daxiao:"da"}            // Object 
+````
 
 
 

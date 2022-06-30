@@ -52,4 +52,46 @@ console.log("console!!!");
 ````
 
 ---
-# 四.
+# 四.JS基本语法
+
+### 1.关键字
+关键字就和其他语言一样，不能被用作变量名。JS的关键字如下：
+abstract   else    instanceof     super       boolean  	enum    	int  	   switch
+break	    export  	interface 	synchronized     byte  	 extends  	let	     this
+case	     false     	long       	throw         catch   final  	 native	   throws
+char	     finally	   new	       transient      class   	float   	null    	true
+const     	for     	package	      try        continue 	function 	private	 typeof
+debugger	  goto   	protected     	var         default	    if    	public	   void
+delete	 implements  	return     	volatile       do	     import   	short   	while
+double	    in	      static       	with
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,3 +13,9 @@ alert("111111")
 ```
 # 三.JS输出
 JS有四种输出方式，如下：
+
+|:----:|:----:| 
+ |window.alert()|警告框|
+ |document.write()|写到 HTML 文档|
+ |innerHTML|写入到 HTML 元素|
+ |console.log()|写入到浏览器的控制台|

@@ -251,15 +251,38 @@ var bri = ["2"];
 var dogs = dog.concat(bri); 
 ````
 
-### 8.splice（）
+###  8.splice（）
 splice可以对数组进行增，删，改的操作。
 
+$\color{red}{注意：}$ splice可以直接对原数组进行操作 
+
+#### 插入（指定位置）
+可以指定位置进行插入多个值，3个参数
+````
+//第一个参数是插入的位置，第二个是从插入位置删除的个数，第三个是插入的值
+var dog = ["wangcai", "male", 5,"red","puppy"];
+dog.splice(1,0,"happy");
+alert(dog);
+````
+#### 删除
+可以删除多个值，两个参数
+````
+//第一个是删除的首个位置，第二个是删除的个数
 
 
+var dog = ["wangcai", "male", 5,"red","puppy"];
+dog.splice(0,3);
+alert(dog);
+````
 
-
-
-
+#### 修改
+修改的操作其实是和插入的操作类似，不过第二个参数不是设置成0，而是设置成你想删掉的个数，再用插入的进行替换就行
+````
+//与插入一样
+var dog = ["wangcai", "male", 5,"red","puppy"];
+dog.splice(3,1,"blue");
+alert(dog);
+````
 
 ### 9.裁剪数组(slice)
 其实就是和python的切片操作类似，将裁剪的部分当作新的数组（不影响原数组）

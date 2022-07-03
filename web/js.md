@@ -196,7 +196,87 @@ var dog = ["wangcai", "male", 5];
 
 如果在数组中填入或输出多个类型的元素，有可能会因为类型问题出错，毕竟JS在语法上比较松散。
 
-比较建议一个数组一个类型，多个类型用对象
+比较建议一个数组一个类型，多个类型用对象。
+
+## 数组的一些方法
+### 1.转换成字符串（toString）
+````
+var dog = ["wangcai", "male", 5];
+alert(dog.toString());
+````
+
+### 2.join()
+join可以改变数组的分隔符
+````
+var dog = ["wangcai", "male", 5];
+alert(dog.jion("%"))
+````
+### 3.栈操作（push ,pop）
+可以将数组看作一个栈，进行先进后出的操作
+
+````
+var dog = ["wangcai", "male", 5];
+dog.push("blue");
+var m=dog.pop();
+alert(m);
+````
+### 4.队列操作(push,shift)
+也可以将数组看作队列进行操作，先进先出
+
+````
+var dog = ["wangcai", "male", 5];
+dog.push("blue");
+var m=dog.shift();
+alert(m);
+````
+### 5.更改操作
+可以通过数组下标找到对应的元素进行更改
+````
+var dog = ["wangcai", "male", 5];
+dog[2]=10;
+````
+### 6.删除操作(delete)
+也是通过数组下标来进行删除
+
+````
+var dog = ["wangcai", "male", 5];
+ delete dog[2];
+````
+
+### 7.拼接操作(concat)
+将两个数组连在一起，形成新的数组
+````
+var dog = ["wangcai", "mal"];
+var bri = ["2"];
+var dogs = dog.concat(bri); 
+````
+
+### 8.splice（）
+splice可以对数组进行增，删，改的操作。
+
+
+
+
+
+
+
+
+### 9.裁剪数组(slice)
+其实就是和python的切片操作类似，将裁剪的部分当作新的数组（不影响原数组）
+````
+//slice(起始位置，结束位置)
+//取出来的不包括结束位置的值
+
+
+var dog = ["wangcai", "male", 5,"red","puppy"];
+var s=dog.slice(1,4)
+````
+
+
+
+
+
+
 
 
 

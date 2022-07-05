@@ -179,37 +179,58 @@ ss.name="sss";//会报错
 ````
 class Dog{
  age: number;
-private color: string;
-private  name: string;
+private _color: string;
+private  _name: string;
+
+constructor(age:number,color:string,name:string){
+this.age=age;
+this._color=color;
+this._name=name;
+}
+
+set name(value:string){
+this._name=value;
+}
+
+set color(value:string){
+this._color=value;
+}
+
+get name():string{
+return this._name;
+}
+
+get color():string{
+return this._color;
+}
+
+printAll(): void{
+alert(this.age+" "+this._color+" "+this._name);
+}
+}
+````
+
+### 5.静态属性(static)
+用static定义的类和属性可以直接使用不需要生成具体的对象
+````
+class Dog{
+age: number;
+color: string;
+name: string;
 
 constructor(age:number,color:string,name:string){
 this.age=age;
 this.color=color;
 this.name=name;
 }
-
-set name(value:string){
-this.name=value;
+//类的函数
+static printAll(): void{
+alert("happy!!!");
+    }
 }
 
-set color(value:string){
-this.color=value;
-}
-
-get name():string{
-return this.name;
-}
-
-get color():string{
-return this.color;
-}
-
-printAll(): void{
-alert(this.age+" "+this.color+" "+this.name);
-}
-}
+Dog.printAll();
 ````
-
 
 
 

@@ -232,14 +232,61 @@ alert("happy!!!");
 Dog.printAll();
 ````
 
+# 七.泛型
+使用泛型就可以让组件支持多种数据类型，可以让组件重复性使用。
+
+有点像c++中的模板类和模板函数
+
+### 1.泛型函数
+````
+function 函数名<泛型>(参数: 泛型): 返回类型{
+
+}
+````
+比如
+````
+function Dog<T>(name: T):T{
+return name;
+}
+let ss=Dog("sssss")
+alert(typeof(ss))
+let sss=Dog(123)
+alert(typeof(sss))
+
+````
+对于泛型类型的使用要注意类型中有一些属性是不通用的，比如说number类型没有.length属性。
+
+于是我们可以把参数设置成泛型数组，这样传入数字的话，返回的数字数组，就有.length属性了。
+
+我们可以通过把泛型变量当作类型的一部分使用来增强灵活性
+````
+function Dog<T>(name: T[]):T[] {
+alert(name.length)
+return name;
+}
+````
+
+### 2.泛型类
+````
+/*
+class 类名<泛型类型>{
+......
+}
+*/
 
 
+class Samples<T>{
+      values: T;
+      prinstall():void{
+         alert(this.values)
+     }
+}
+let simples = new Samples<number>();
+simples.values = 123;
+simples.prinstall();
+````
 
-
-
-
-
-
+# 八.模块
 
 
 

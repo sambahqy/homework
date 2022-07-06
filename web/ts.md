@@ -289,8 +289,32 @@ simples.prinstall();
 # 八.模块
 当项目很大时，如果将所有代码都写在一起无疑是很恼火的。于是需要使用模块进行管理。
 
-由于模块只在自身范围内起作用，对模块外部是不可见的。所以我们需要使用
+由于模块只在自身范围内起作用，对模块外部是不可见的。所以我们需要使用$\color{red}{export}$来导出，
+也需要用$\color{red}{import}$来导入
+````
+//Dog.ts
+//export 暴露这个类
+//export 类...
+export class Dog{
+        name:string;
+        age:number;
+     printall(): void {
+            alert(`this dog is ${this.age} and name is ${this.name}`)
+     }
+}
 
+
+//main.ts
+//导入Dog.ts模块(import),后缀(.ts)默认去掉
+//import {模块} from 位置
+
+
+import {Dog} from ../Dogs/Dog;
+let a = new Dog();
+a.name = "puppy"
+a.age = 12;
+a.printall();
+````
 
 
 
